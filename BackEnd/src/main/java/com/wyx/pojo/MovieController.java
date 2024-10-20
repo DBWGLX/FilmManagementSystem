@@ -15,8 +15,7 @@ public class MovieController {
 
     @PostMapping
     public void addMovie(@RequestBody Movie movie) {
-        System.out.println("Inserting movie: " + movie);
-
+        System.out.println("Inserting movie: "+movie);
         movieRepository.insert(movie);
     }
 
@@ -32,7 +31,6 @@ public class MovieController {
 
     @PutMapping("/{id}")
     public void updateMovie(@PathVariable Long id, @RequestBody Movie movie) {
-        movie.setId(id);
         movieRepository.update(movie);
     }
 

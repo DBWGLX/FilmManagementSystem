@@ -6,7 +6,7 @@ import java.util.List;
 
 @Mapper
 public interface MovieRepository {
-    @Insert("INSERT INTO movies(title, genre, rating, YearOfIssue) VALUES(#{title}, #{genre}, #{rating}, #{YearOfIssue})")
+    @Insert("INSERT INTO movies(title, genre, rating, yearOfIssue) VALUES(#{title}, #{genre}, #{rating}, #{yearOfIssue})")
     void insert(Movie movie);
 
     @Select("SELECT * FROM movies WHERE id = #{id}")
@@ -15,7 +15,7 @@ public interface MovieRepository {
     @Select("SELECT * FROM movies")
     List<Movie> findAll();
 
-    @Update("UPDATE movies SET title = #{title}, genre = #{genre}, YearOfIssue = #{YearOfIssue} WHERE id = #{id}")
+    @Update("UPDATE movies SET title = #{title}, genre = #{genre}, yearOfIssue = #{yearOfIssue} WHERE id = #{id}")
     void update(Movie movie);
 
     @Delete("DELETE FROM movies WHERE id = #{id}")

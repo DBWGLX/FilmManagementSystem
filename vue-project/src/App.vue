@@ -6,13 +6,13 @@
         <strong>Title</strong>, <strong>Genre</strong>, <strong>Rating</strong>, <strong>Year of Issue</strong>
       </li>
       <li v-for="movie in movies" :key="movie.id">
-        {{ movie.title }}, {{ movie.genre }}, {{ movie.rating }}, {{ movie.YearOfIssue }}
+        {{ movie.title }}, {{ movie.genre }}, {{ movie.rating }}, {{ movie.yearOfIssue }}
       </li>
     </ul>
     <input v-model="newMovie.title" placeholder="Title" />
     <input v-model="newMovie.genre" placeholder="Genre" />
     <input v-model="newMovie.rating" placeholder="Rating" />
-    <input v-model="newMovie.YearOfIssue" placeholder="Year of Issue" />
+    <input v-model="newMovie.yearOfIssue" placeholder="Year of Issue" />
     <button @click="addMovie(newMovie)">Add Movie</button>
 
     <button @click="fetchMovies">Refresh</button>
@@ -24,16 +24,16 @@ export default {
   data() {
     return {
       movies: [],
-      newMovie: { title: '', genre: '', rating: '', YearOfIssue: '' }
+      newMovie: { title: '', genre: '', rating: '', yearOfIssue: '' }
     };
   },
   methods: {
     async addMovie(movie) {
       try {
-        // movie.YearOfIssue = parseInt(movie.YearOfIssue, 10);
-        // movie.rating = parseFloat(movie.rating);
+        movie.yearOfIssue = parseInt(movie.yearOfIssue, 10);
+        movie.rating = parseFloat(movie.rating);
 
-        console.log("Year of Issue:", movie.YearOfIssue);
+        console.log("YearofIssue:", movie.yearOfIssue);
         console.log("Rating:", movie.rating);
 
         await this.$http.post('/api/movies', movie);

@@ -11,8 +11,8 @@ public class Movie {
 
     private String title;
     private String genre;
-    private Double rating;
-    private int YearOfIssue;
+    private double rating;
+    private int yearOfIssue;
 
     public Movie() {}
     public Movie(Long id, String title, String genre, double rating, int year) {
@@ -21,7 +21,7 @@ public class Movie {
         this.title = title;
         this.genre = genre;
         this.rating = rating; // 初始化 rating
-        this.YearOfIssue = year;
+        this.yearOfIssue = year;
     }
 
     @Override
@@ -31,7 +31,7 @@ public class Movie {
                 ", title='" + title + '\'' +
                 ", genre='" + genre + '\'' +
                 ", rating=" + rating +
-                ", YearOfIssue=" + YearOfIssue +
+                ", yearOfIssue=" + yearOfIssue +
                 '}';
     }
 
@@ -53,7 +53,7 @@ public class Movie {
 
     public void setYearOfIssue(int yearOfIssue) {
         System.out.println("setingYear: " + yearOfIssue);
-        this.YearOfIssue = yearOfIssue;
+        this.yearOfIssue = yearOfIssue;
     }
 
     public Long getId() {
@@ -73,6 +73,6 @@ public class Movie {
     }
 
     public int getYearOfIssue() {
-        return YearOfIssue;
+        return yearOfIssue;
     }
 }
