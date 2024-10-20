@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyx.pojo.MovieRepository">
+
+    <insert id="insert" parameterType="com.wyx.pojo.Movie">
+        INSERT INTO movies (title, genre, rating, YearOfIssue)
+        VALUES (#{title}, #{genre}, #{rating},#{YearOfIssue})
+    </insert>
+
+    <select id="findById" resultType="com.wyx.pojo.Movie">
+        SELECT * FROM movies WHERE id = #{id}
+    </select>
+
+    <select id="findAll" resultType="com.wyx.pojo.Movie">
+        SELECT * FROM movies
+    </select>
+
+    <update id="update" parameterType="com.wyx.pojo.Movie">
+        UPDATE movies
+        SET title = #{title}, genre = #{genre}, YearOfIssue = #{YearOfIssue}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM movies WHERE id = #{id}
+    </delete>
+
+</mapper>

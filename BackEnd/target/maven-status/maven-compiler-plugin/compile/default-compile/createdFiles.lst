@@ -1,0 +1,6 @@
+com\wyx\pojo\MovieMapper.class
+com\wyx\pojo\Application.class
+com\wyx\pojo\Movie.class
+com\wyx\pojo\MovieController.class
+com\wyx\pojo\MyBatisConfig.class
+com\wyx\pojo\MovieRepository.class
