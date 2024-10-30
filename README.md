@@ -17,26 +17,29 @@
 
   &nbsp;&nbsp;&nbsp; java (SpringBoot,Mybatis)
 
+- ### DataBase:
+
+  &nbsp;&nbsp;&nbsp; MySQL
+  
 
 ## Details
 
 ### 1./vue-project
 
-前端实现。
+> 前端实现。
 
-#### ./src/App.vue
+![image](https://github.com/user-attachments/assets/d52ccf0e-2d63-4e6e-a483-1c3151cbd582)
 
-##### <template>
 
-标记语言
+### ./src/App.vue
+
+#### template:
 
 li v-for 列出movies中的条目
 
 buttons: Add Movie, Refresh
 
-##### <script>
-
-js
+#### script:
 
 methods: addMovie, fetchMovies从数据库中读取并存到movies列表
 
@@ -44,25 +47,35 @@ methods: addMovie, fetchMovies从数据库中读取并存到movies列表
 
 ### 2./BackEnd
 
-后端实现。
+> 后端实现。
+
+![image](https://github.com/user-attachments/assets/1840666a-1fdf-495c-a33c-37af94fb9205)
+
+*(Maven构建)*
 
 ### ./src/main
 
 代码逻辑
 
-#### ./resources
-
-##### application.properties:
+### ./src/main/resources/application.properties
 
 springboot框架的配置文件
 
 配置了数据库的连接，mapper路径
 
-##### mapper/MovieMapper.xml
+### ./src/main/resources/mapper/MovieMapper.xml
 
 mybatis操作数据库
 
 ### ./pom.xml
 
 依赖
+
+### 3.数据库
+
+![image](https://github.com/user-attachments/assets/a39c0cd0-638b-467e-a8f4-e18772ec088e)
+
+
+![image](https://github.com/user-attachments/assets/b0a2673e-8313-4c48-a8b2-cd724b915153)
+
 
