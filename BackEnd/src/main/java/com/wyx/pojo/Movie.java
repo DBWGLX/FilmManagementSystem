@@ -2,11 +2,11 @@ package com.wyx.pojo;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "movies")
+@Entity//标识这是一个 JPA 实体类，对应数据库中的一个表。
+@Table(name = "movies")//指定映射到数据库中的 movies 表。如果表名与类名相同，@Table 注解可以省略。
 public class Movie {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id//指定该字段是实体的主键。
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//表示主键由数据库自动生成
     private Long id;
 
     private String title;

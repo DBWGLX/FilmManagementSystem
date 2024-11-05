@@ -37,7 +37,7 @@
 
 li v-for 列出movies中的条目
 
-buttons: Add Movie, Refresh
+buttons: Add Movie(POST), Refresh(GET)
 
 #### script:
 
@@ -56,6 +56,23 @@ methods: addMovie, fetchMovies从数据库中读取并存到movies列表
 ### ./src/main
 
 代码逻辑
+
+- Application.java
+【启动类】
+- Movie.java
+【JPA实体类】对应数据库中的一个表。
+
+- MovieRepository.java
+【MyBatis Mapper 接口】定义了与数据库表进行交互的基本 CRUD操作
+
+- MovieController.java
+【RESTful API】处理前端的请求，调用上面MovieRepository接口的方法操作数据库。
+
+- MyBatisConfig.java
+【MyBatis 配置类】配置 MyBatis，加载 mapper 接口。(SqlSession对象是 MyBatis 中实际执行数据库操作的核心对象)
+
+- WebConfig.java
+【SpringMVC 配置类】配置 SpringMVC的跨域资源共享(CORS)
 
 ### ./src/main/resources/application.properties
 

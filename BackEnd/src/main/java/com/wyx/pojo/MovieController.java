@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/api/movies")
+//RESTful API
+@RestController//组合注解，等价于 @Controller【处理客户端请求】 和 @ResponseBody【返回数据写入响应体】
+@RequestMapping("/api/movies")//
 public class MovieController {
     @Autowired
     private MovieRepository movieRepository;
